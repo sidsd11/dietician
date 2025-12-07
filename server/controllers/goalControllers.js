@@ -227,7 +227,6 @@ export const getAllGoals = async (req, res) => {
 export const getSingleGoal = async (req, res) => {
     try {
         const userId = req.user.id
-        console.log(userId)
         const goalId = req.params.id
         if (!goalId) {
             return res.json({success: false, message: 'Missing details'})

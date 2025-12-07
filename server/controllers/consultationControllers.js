@@ -227,7 +227,6 @@ export const getAllConsultations = async (req, res) => {
 export const getSingleConsultation = async (req, res) => {
     try {
         const userId = req.user.id
-        console.log(userId)
         const consultationId = req.params.id
         if (!consultationId) {
             return res.json({success: false, message: 'Missing details'})

@@ -7,7 +7,6 @@ import Login from './pages/Login'
 import ResetPassword from './pages/ResetPassword'
 import MyConsultations from './pages/MyConsultations'
 import MyGoals from './pages/MyGoals'
-import Header from './components/Header'
 
 const App = () => {
     return (

@@ -221,7 +221,7 @@ const MyGoals = () => {
                         </h1>
 
                         <h1 className='text-2xl text-center font-semibold mb-6 cursor-pointer hover:scale-110 transition-all' onClick={() => setCreateNewGoal(true)}>
-                            <CirclePlus className='size-5 inline-block' /> Cerate a new goal request
+                            <CirclePlus className='size-5 inline-block' /> Setup a new goal target
                         </h1>
 
                         {/* Goal filter */}
@@ -391,12 +391,12 @@ const MyGoals = () => {
                                             </h1>
 
                                             <form onSubmit={editSelectedGoal}>
-                                                {<div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
-                                                    <input type='text' value={EditGoalTitle} onChange={e => setEditGoalTitle(e.target.value)} className='bg-transparent outline-none text-white' placeholder='Enter title' maxLength='20' required />
-                                                </div>}
+                                                <div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
+                                                    <input type='text' value={EditGoalTitle} onChange={e => setEditGoalTitle(e.target.value)} className='bg-transparent outline-none text-white' placeholder='What is your goal?' maxLength='20' required />
+                                                </div>
 
                                                 <div className='mb-4 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
-                                                    <textarea value={editGoalDescription} onChange={e => setEditGoalDescription(e.target.value)} className='bg-transparent outline-none text-white w-full min-h-[200px] resize overflow-auto' placeholder='Enter description' maxLength='200' required />
+                                                    <textarea value={editGoalDescription} onChange={e => setEditGoalDescription(e.target.value)} className='bg-transparent outline-none text-white w-full min-h-[200px] resize overflow-auto' placeholder='Descibe your goal' maxLength='200' required />
                                                 </div>
 
                                                 <button className='w-full py-3 bg-linear-to-r from-indigo-500 to-indigo-900 text-white rounded-full cursor-pointer'>
@@ -409,7 +409,7 @@ const MyGoals = () => {
                                         /* Create new goals form */
                                         <>
                                             <h1 className='text-3xl text-center font-semibold text-white mb-5'>
-                                                Create a new goal request
+                                                Setup a new goal target
                                             </h1>
 
                                             <form onSubmit={createGoal}>
@@ -418,7 +418,7 @@ const MyGoals = () => {
                                                 </div>
 
                                                 <div className='mb-4 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
-                                                    <textarea value={createNewGoalDescription} onChange={e => setCreateNewGoalDescription(e.target.value)} className='bg-transparent outline-none text-white w-full min-h-[150px] resize overflow-auto' placeholder='Descibe your queries' maxLength='200' required />
+                                                    <textarea value={createNewGoalDescription} onChange={e => setCreateNewGoalDescription(e.target.value)} className='bg-transparent outline-none text-white w-full min-h-[150px] resize overflow-auto' placeholder='Descibe your goal' maxLength='200' required />
                                                 </div>
 
                                                 <div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
@@ -427,7 +427,7 @@ const MyGoals = () => {
                                                 </div>
 
                                                 <button className='w-full py-3 bg-linear-to-r from-indigo-500 to-indigo-900 text-white rounded-full cursor-pointer'>
-                                                    Create
+                                                    Setup
                                                 </button>
                                             </form>
                                         </>

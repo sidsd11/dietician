@@ -30,7 +30,6 @@ const MyConsultations = () => {
     const [editConsultationDescription, setEditConsultationDescription] = useState('')  /* To store description of selected consultations which user wants to edit */
     const [editConsultationTitleCheck, setEditConsultationTitleCheck] = useState('')  /* To check where old and new title of selected consultations which user wants to edit are same or not */
     const [editConsultationDescriptionCheck, setEditConsultationDescriptionCheck] = useState('')  /* To check where old and new description of selected consultations which user wants to edit are same or not */
-    const [editConsultationDateCheck, setEditConsultationDateCheck] = useState('')  /* To check where old and new date of selected consultations which user wants to edit are same or not */
     const [editConsultationId, setEditConsultationId] = useState('')  /* To store id of selected consultations which user wants to edit */
 
     /* Create new consultations */
@@ -392,16 +391,11 @@ const MyConsultations = () => {
 
                                             <form onSubmit={editSelectedConsultation}>
                                                 <div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
-                                                    <input type='text' value={editConsultationTitle} onChange={e => setEditConsultationTitle(e.target.value)} className='bg-transparent outline-none text-white' placeholder='Enter title' maxLength='20' required />
+                                                    <input type='text' value={editConsultationTitle} onChange={e => setEditConsultationTitle(e.target.value)} className='bg-transparent outline-none text-white' placeholder='What is your consultation?' maxLength='20' required />
                                                 </div>
 
                                                 <div className='mb-4 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
-                                                    <textarea value={editConsultationDescription} onChange={e => setEditConsultationDescription(e.target.value)} className='bg-transparent outline-none text-white w-full min-h-[200px] resize overflow-auto' placeholder='Enter description' maxLength='200' required />
-                                                </div>
-
-                                                <div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-[#333A5C]'>
-                                                    <input type='date' value={editConsultationDate} onChange={e => setCreateNewConsultationDate(e.target.value)} className='bg-transparent outline-none text-white w-full' placeholder='Select date'
-                                                    maxLength='20' min={new Date().toISOString().split('T')[0]} required />
+                                                    <textarea value={editConsultationDescription} onChange={e => setEditConsultationDescription(e.target.value)} className='bg-transparent outline-none text-white w-full min-h-[200px] resize overflow-auto' placeholder='Descibe your queries' maxLength='200' required />
                                                 </div>
 
                                                 <button className='w-full py-3 bg-linear-to-r from-indigo-500 to-indigo-900 text-white rounded-full cursor-pointer'>

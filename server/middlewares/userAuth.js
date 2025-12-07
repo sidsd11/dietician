@@ -19,7 +19,6 @@ const userAuth = async (req, res, next) => {
                 name: user.name,
                 email: user.email
             }
-            console.log(req.user)
         }
         else {
             return res.json({success: false, message: 'Not authorized. Login again'})
